@@ -61,7 +61,7 @@ struct LoginScreen: View {
       if loginState.showError {
         Text("Invalid username or password")
           .foregroundStyle(.red)
-          .font(.ibmPlexMono(.regular, size: 14))
+          .font(.iaWriterQuattro(.regular, size: 14))
       }
 
       
@@ -98,7 +98,7 @@ struct LoginScreen: View {
         },
         label: {
           Text("Submit")
-            .font(.ibmPlexMono(.bold, size: 16))
+            .font(.iaWriterQuattro(.bold, size: 16))
             .frame(maxWidth: .infinity)
             .frame(height: 40)
         }
