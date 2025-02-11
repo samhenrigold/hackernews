@@ -43,7 +43,7 @@ struct StoryRow: View {
           HStack {
             Text("@\(author)")
               .font(theme.userMonoFont(size: 12, weight: .bold))
-              .foregroundColor(.hnOrange)
+              .foregroundStyle(.hnOrange)
             Spacer()
             if content.bookmarked {
               Image(systemName: "book.fill")
@@ -60,14 +60,14 @@ struct StoryRow: View {
             HStack(spacing: 4) {
               Image(systemName: "arrow.up")
                 .font(.system(size: 12))
-                .foregroundColor(.green)
+                .foregroundStyle(.green)
               Text("\(content.score)")
                 .font(theme.userSansFont(size: 12, weight: .medium))
             }
             HStack(spacing: 4) {
               Image(systemName: "clock")
                 .font(.system(size: 12))
-                .foregroundColor(.purple)
+                .foregroundStyle(.purple)
               Text(content.relativeDate())
                 .font(theme.userSansFont(size: 12, weight: .medium))
             }
@@ -105,7 +105,7 @@ struct StoryRowLoadingState: View {
     VStack(alignment: .leading, spacing: 8) {
       Text("@humdinger")
         .font(theme.userMonoFont(size: 12, weight: .bold))
-        .foregroundColor(.hnOrange)
+        .foregroundStyle(.hnOrange)
         .redacted(reason: .placeholder)
       Text("Some Short Title")
         .font(theme.userMonoFont(size: 16, weight: .bold))
@@ -114,7 +114,7 @@ struct StoryRowLoadingState: View {
         HStack(spacing: 4) {
           Image(systemName: "arrow.up")
             .font(.system(size: 12))
-            .foregroundColor(.green)
+            .foregroundStyle(.green)
             .redacted(reason: .placeholder)
           Text("99")
             .font(
@@ -125,7 +125,7 @@ struct StoryRowLoadingState: View {
         HStack(spacing: 4) {
           Image(systemName: "clock")
             .font(.system(size: 12))
-            .foregroundColor(.purple)
+            .foregroundStyle(.purple)
             .redacted(reason: .placeholder)
           Text("2h ago")
             .font(theme.userSansFont(size: 12, weight: .medium))

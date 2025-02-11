@@ -60,7 +60,7 @@ struct LoginScreen: View {
 
       if loginState.showError {
         Text("Invalid username or password")
-          .foregroundColor(.red)
+          .foregroundStyle(.red)
           .font(.ibmPlexMono(.regular, size: 14))
       }
 
@@ -70,7 +70,7 @@ struct LoginScreen: View {
           .font(.ibmPlexSans(.regular, size: 12))
         Text("Hacker News Guidelines")
           .font(.ibmPlexSans(.regular, size: 12))
-          .foregroundColor(.blue)
+          .foregroundStyle(.blue)
           .underline()
           .onTapGesture {
             openURL("https://news.ycombinator.com/newsguidelines.html")

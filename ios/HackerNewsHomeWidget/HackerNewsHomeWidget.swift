@@ -62,7 +62,7 @@ struct HackerNewsHomeWidgetEntryView: View {
     VStack(alignment: .leading, spacing: 8) {
       Text("Top Stories")
         .font(theme.titleFont)
-        .foregroundColor(.hnOrange)
+        .foregroundStyle(.hnOrange)
 
       switch family {
       case .systemSmall:
@@ -105,13 +105,13 @@ struct HackerNewsHomeWidgetEntryView: View {
           Text(story.title)
             .font(theme.titleFont)
             .lineLimit(2)
-            .foregroundColor(.primary)
+            .foregroundStyle(.primary)
 
           HStack(spacing: 12) {
             HStack(spacing: 4) {
               Image(systemName: "arrow.up")
                 .font(theme.userSansFont(size: 10))
-                .foregroundColor(.green)
+                .foregroundStyle(.green)
               Text("\(story.score)")
                 .font(theme.userSansFont(size: 10, weight: .medium))
             }
@@ -139,13 +139,13 @@ struct HackerNewsHomeWidgetEntryView: View {
             .font(theme.titleFont)
             .lineLimit(2)
             .multilineTextAlignment(.leading)
-            .foregroundColor(.primary)
+            .foregroundStyle(.primary)
 
           HStack(spacing: 16) {
             HStack(spacing: 4) {
               Image(systemName: "arrow.up")
                 .font(theme.userSansFont(size: 12))
-                .foregroundColor(.green)
+                .foregroundStyle(.green)
               Text("\(story.score)")
                 .font(theme.userSansFont(size: 12, weight: .medium))
             }
@@ -153,7 +153,7 @@ struct HackerNewsHomeWidgetEntryView: View {
             HStack(spacing: 4) {
               Image(systemName: "clock")
                 .font(.system(size: 12))
-                .foregroundColor(.purple)
+                .foregroundStyle(.purple)
               Text(
                 Date(timeIntervalSince1970: TimeInterval(story.time))
                   .timeAgoDisplay()
@@ -185,13 +185,13 @@ struct HackerNewsHomeWidgetEntryView: View {
             .font(theme.titleFont)
             .lineLimit(2)
             .multilineTextAlignment(.leading)
-            .foregroundColor(.primary)
+            .foregroundStyle(.primary)
 
           HStack(spacing: 16) {
             HStack(spacing: 4) {
               Image(systemName: "arrow.up")
                 .font(theme.userSansFont(size: 12))
-                .foregroundColor(.green)
+                .foregroundStyle(.green)
               Text("\(story.score)")
                 .font(theme.userSansFont(size: 12, weight: .medium))
             }
@@ -199,7 +199,7 @@ struct HackerNewsHomeWidgetEntryView: View {
             HStack(spacing: 4) {
               Image(systemName: "clock")
                 .font(.system(size: 12))
-                .foregroundColor(.purple)
+                .foregroundStyle(.purple)
               Text(
                 Date(timeIntervalSince1970: TimeInterval(story.time))
                   .timeAgoDisplay()

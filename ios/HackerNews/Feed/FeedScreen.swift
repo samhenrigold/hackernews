@@ -34,7 +34,7 @@ struct FeedScreen: View {
                 .scaleEffect(
                   model.feedState.selectedFeed == feedType ? 1.0 : 0.8
                 )
-                .foregroundColor(
+                .foregroundStyle(
                   model.feedState.selectedFeed == feedType ? .hnOrange : .gray)
             }
           }
