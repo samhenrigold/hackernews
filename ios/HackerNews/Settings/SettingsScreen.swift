@@ -213,7 +213,7 @@ struct SettingsScreen: View {
           .containerShape(.rect(cornerRadius: 24, style: .continuous))
 
         Text("Settings")
-           .hnFont(.title2, legibilityWeight: .bold)
+          .font(.iaWriterQuattro(.bold, size: 24))
           .padding(.horizontal, 16)
       }
       .frame(height: 60)

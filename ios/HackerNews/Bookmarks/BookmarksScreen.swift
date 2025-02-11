@@ -48,7 +48,7 @@ struct BookmarksScreen: View {
           .containerShape(.rect(cornerRadius: 24, style: .continuous))
 
         Text("Bookmarks")
-           .hnFont(.title2, legibilityWeight: .bold)
+          .font(.iaWriterQuattro(.bold, size: 24))
           .padding(.horizontal, 16)
       }
       .frame(height: 60)

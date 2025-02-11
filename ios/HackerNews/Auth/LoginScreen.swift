@@ -61,12 +61,12 @@ struct LoginScreen: View {
       if loginState.showError {
         Text("Invalid username or password")
           .foregroundStyle(.red)
-          .hnFont(.subheadline)
+          .font(.iaWriterQuattro(.regular, size: 14))
       }
 
       
     Text("By signing in, you agree to the [Hacker\u{00a0}News Guidelines](https://news.ycombinator.com/newsguidelines.html).")
-            .hnFont(.footnote)
+          .font(.iaWriterQuattro(.regular, size: 12))
           .frame(maxWidth: .infinity, alignment: .leading)
       
       Spacer()
@@ -89,7 +89,7 @@ struct LoginScreen: View {
         },
         label: {
           Text("Submit")
-            .hnFont(.callout, legibilityWeight: .bold)
+            .font(.iaWriterQuattro(.bold, size: 16))
             .frame(maxWidth: .infinity)
             .frame(height: 40)
         }

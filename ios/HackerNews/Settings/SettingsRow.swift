@@ -18,7 +18,7 @@ struct SettingsRow<Leading: View, Trailing: View>: View {
     HStack(alignment: .center, spacing: 8) {
       leadingIcon()
       Text(text)
-        .hnFont(.callout, legibilityWeight: .bold)
+        .font(.iaWriterQuattro(.bold, size: 16))
       Spacer()
       trailingIcon()
     }
