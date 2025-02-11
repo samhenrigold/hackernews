@@ -21,7 +21,9 @@ let package = Package(
       resources: [
         .copy("ibm_plex_sans_bold.ttf"),
         .copy("ibm_plex_sans_medium.ttf"),
-        .copy("ibm_plex_sans_regular.ttf")
+        .copy("ibm_plex_sans_regular.ttf"),
+        .copy("iAWriterQuattroV.ttf"),
+        .copy("iAWriterQuattroV-Italic.ttf")
       ],
       swiftSettings: [
         .swiftLanguageMode(.v5)
