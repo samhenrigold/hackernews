@@ -30,7 +30,7 @@ struct FeedScreen: View {
               }
             }) {
               Text(feedType.title)
-                .font(.iaWriterQuattro(.bold, size: 24))
+                .hnFont(.title2, legibilityWeight: .bold)
                 .scaleEffect(
                   model.feedState.selectedFeed == feedType ? 1.0 : 0.8
                 )
