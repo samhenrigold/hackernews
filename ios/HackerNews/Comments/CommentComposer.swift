@@ -5,9 +5,11 @@
 //  Created by Rikin Marfatia on 1/16/25.
 //
 import SwiftUI
+import Common
 
 struct CommentComposer: View {
   @Binding var state: CommentComposerState
+  @Environment(Theme.self) private var theme
   let goToLogin: () -> Void
   let sendComment: () -> Void
 
@@ -17,7 +19,7 @@ struct CommentComposer: View {
         Image(systemName: "message.fill")
           .font(.system(size: 12))
         Text("Add a comment")
-          .font(.ibmPlexSans(.medium, size: 12))
+              .font(theme.userSansFont(size: 12, weight: .medium))
       }
       TextField(
         "Words of wisdom",

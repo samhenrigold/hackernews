@@ -65,18 +65,9 @@ struct LoginScreen: View {
       }
 
       
-      HStack(spacing: 0) {
-        Text("By signing in, you agree to the ")
-          .font(.ibmPlexSans(.regular, size: 12))
-        Text("Hacker News Guidelines")
-          .font(.ibmPlexSans(.regular, size: 12))
-          .foregroundStyle(.blue)
-          .underline()
-          .onTapGesture {
-            openURL("https://news.ycombinator.com/newsguidelines.html")
-          }
-        Spacer()
-      }
+    Text("By signing in, you agree to the [Hacker\u{00a0}News Guidelines](https://news.ycombinator.com/newsguidelines.html).")
+          .font(.iaWriterQuattro(.regular, size: 12))
+          .frame(maxWidth: .infinity, alignment: .leading)
       
       Spacer()
         .frame(maxHeight: 16)

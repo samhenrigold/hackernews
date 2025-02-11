@@ -18,7 +18,7 @@ struct SettingsScreen: View {
       LazyVStack(spacing: 8) {
         VStack(alignment: .leading, spacing: 4) {
           Text("Profile")
-            .font(.ibmPlexSans(.medium, size: 12))
+            .font(theme.userSansFont(size: 12, weight: .medium))
           LoginRow(loggedIn: model.authState == AuthState.loggedIn) {
             model.gotoLogin()
           }
@@ -26,7 +26,7 @@ struct SettingsScreen: View {
 
         VStack(alignment: .leading, spacing: 4) {
           Text("About")
-            .font(.ibmPlexSans(.medium, size: 12))
+            .font(theme.userSansFont(size: 12, weight: .medium))
           SettingsRow(
             text: "Follow Emerge",
             leadingIcon: {
@@ -131,7 +131,7 @@ struct SettingsScreen: View {
         VStack(alignment: .leading, spacing: 4) {
           @Bindable var theme = theme
           Text("Appearance")
-            .font(.ibmPlexSans(.medium, size: 12))
+                .font(theme.userSansFont(size: 12, weight: .medium))
 
           SettingsRow(
             text: "Use System Font",

@@ -5,10 +5,11 @@
 //  Created by Rikin Marfatia on 1/17/25.
 //
 
-import Foundation
 import SwiftUI
+import Common
 
 struct LoginRow: View {
+  @Environment(Theme.self) private var theme
   let loggedIn: Bool
   let tapped: () -> Void
 
@@ -20,7 +21,7 @@ struct LoginRow: View {
           width: 8
         )
       Text(loginText())
-        .font(.iaWriterQuattro(.bold, size: 16))
+        .font(theme.userMonoFont(size: 16, weight: .bold))
       Spacer()
       Image(systemName: "message.fill")
         .font(.system(size: 12))
