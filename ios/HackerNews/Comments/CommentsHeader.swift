@@ -39,7 +39,7 @@ struct CommentsHeader: View {
             .font(.system(size: 12))
             .foregroundStyle(.purple)
           Text(state.story.displayableDate)
-                .font(theme.userSansFont(size: 12, weight: .medium))
+            .font(.ibmPlexSans(.medium, size: 12))
         }
         Spacer()
         // share button

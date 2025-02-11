@@ -5,19 +5,18 @@
 //  Created by Rikin Marfatia on 12/3/24.
 //
 
+import Foundation
 import SwiftUI
-import Common
 
 struct BookmarksScreen: View {
   @Binding var model: AppViewModel
-  @Environment(Theme.self) private var theme
 
   var body: some View {
     Group {
       if model.bookmarks.isEmpty {
         ZStack {
           Text("Long-press a story to bookmark it.")
-                .font(theme.userSansFont(size: 18, weight: .medium))
+            .font(.ibmPlexSans(.medium, size: 18))
         }
       } else {
         ScrollView {
