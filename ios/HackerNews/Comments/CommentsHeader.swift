@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
-import Common
 
 struct CommentsHeader: View {
-  @Environment(Theme.self) private var theme
   let state: CommentsHeaderState
   let likePost: () -> Void
   let flagPost: () -> Void
@@ -21,7 +19,7 @@ struct CommentsHeader: View {
       // title - wrap in Button
       Button(action: onTitleTap) {
         Text(state.story.title)
-          .font(theme.userMonoFont(size: 16, weight: .bold))
+          .font(.ibmPlexMono(.bold, size: 16))
           .frame(maxWidth: .infinity, alignment: .leading)
       }
       .buttonStyle(.plain)
@@ -31,7 +29,7 @@ struct CommentsHeader: View {
         // post author
         let author = state.story.by != nil ? state.story.by! : ""
         Text("@\(author)")
-          .font(theme.userMonoFont(size: 12, weight: .bold))
+          .font(.ibmPlexMono(.bold, size: 12))
           .foregroundStyle(.hnOrange)
         // post time
         HStack(alignment: .center, spacing: 4.0) {
@@ -84,7 +82,7 @@ struct CommentsHeader: View {
           Image(systemName: "chevron.up.chevron.down")
             .font(.caption2)
           Text(text.formattedHTML())
-            .font(theme.userMonoFont(size: 12))
+            .font(.ibmPlexMono(.regular, size: 12))
             .frame(maxWidth: .infinity, alignment: .leading)
             .lineLimit(state.expanded ? nil : 4)
         }

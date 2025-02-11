@@ -90,13 +90,13 @@ public final class Theme {
     }
     switch weight {
     case .regular:
-      return .iaWriterQuattro(.regular, size: size)
+      return .ibmPlexMono(.regular, size: size)
     case .bold:
-      return .iaWriterQuattro(.bold, size: size)
+      return .ibmPlexMono(.bold, size: size)
     case .medium:
-      return .iaWriterQuattro(.medium, size: size)
+      return .ibmPlexMono(.medium, size: size)
     default:
-      return .iaWriterQuattro(.regular, size: size)
+      return .ibmPlexMono(.regular, size: size)
     }
   }
 
